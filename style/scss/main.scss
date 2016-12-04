@@ -1,0 +1,26 @@
+/**VENDOR**/
+@import "./reset";
+@import "../../node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/**IMPORT**/
+@import "./color";
+@import "./animation";
+
+body {
+  padding: 200px;
+  color: $white;
+  background-color: $blue;
+  font-family: 'Roboto', Verdana, sans-serif;
+  text-align: center;
+  @include transition(all 800ms linear);
+  &.change-bg {
+    background-color: $red;
+    p {
+      @include animation(rotate 800ms ease);
+    }
+  }
+  p {
+    box-sizing: border-box;
+    padding: 50px;
+  }
+}
